@@ -1,0 +1,27 @@
+import { NavLink } from "react-router-dom";
+import { IoHome, IoAlertCircleOutline, IoMenu } from "react-icons/io5";
+import logo from '../assets/dkultur/logo.png'
+
+
+
+
+export default function Navbar() {
+    const linkStyle = "px-4 py-2 text-accent";
+
+
+    return (
+        <nav className="w-full">
+            <div className="w-full flex items-center justify-between  gap-4 color-accent">
+                <NavLink to="/" className={linkStyle}><IoHome size={20} /></NavLink>
+                <div className="w-[120px] h-[50px] flex items-center justify-center">
+                    <img
+                        src={logo}
+                        alt="logo"
+                        className="w-[40px] h-[40px]"
+                    />
+                </div>
+                <NavLink to="/about-page" className={linkStyle}><IoMenu size={23} /></NavLink>
+            </div>
+        </nav>
+    )
+}

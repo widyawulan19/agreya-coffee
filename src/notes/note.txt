@@ -1,0 +1,266 @@
+import { NavLink } from "react-router-dom";
+
+export default function Navbar() {
+  const linkStyle = "px-4 py-2 hover:text-yellow-400";
+
+  return (
+    <nav className="flex justify-between items-center p-4 border-b border-gray-800">
+      <div className="font-bold">SUSHI MENU</div>
+
+      <div className="flex gap-4">
+        <NavLink to="/" className={linkStyle}>Home</NavLink>
+        <NavLink to="/category" className={linkStyle}>Category</NavLink>
+        <NavLink to="/recommendation" className={linkStyle}>Recommendation</NavLink>
+        <NavLink to="/about" className={linkStyle}>About</NavLink>
+      </div>
+    </nav>
+  );
+}
+
+
+import { Link } from "react-router-dom";
+
+export default function NavButton({
+  to,
+  label,
+}: {
+  to: string;
+  label: string;
+}) {
+  return (
+    <Link
+      to={to}
+      className="px-6 py-2 bg-white text-black rounded-full hover:bg-gray-300"
+    >
+      {label}
+    </Link>
+  );
+}
+
+import NavButton from "../components/NavButton";
+
+export default function Welcome() {
+  return (
+    <div className="h-[80vh] flex flex-col items-center justify-center text-center gap-6">
+      <h1 className="text-5xl font-bold">Welcome to Sushi Menu 🍣</h1>
+      <p className="text-gray-400 max-w-md">
+        Explore Japanese cuisine with a modern digital menu experience
+      </p>
+
+      <NavButton to="/category" label="Start Explore" />
+    </div>
+  );
+}
+
+
+import menu from "../data/menu.json";
+import { Link } from "react-router-dom";
+import type { MenuCategory } from "../types/menu";
+
+const data = menu as MenuCategory[];
+
+export default function Category() {
+  return (
+    <div className="p-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+      {data.map((cat) => (
+        <Link
+          key={cat.category}
+          to={`/category/${cat.category}`}
+          className="p-6 border border-gray-700 rounded-xl hover:bg-gray-900"
+        >
+          <h2 className="text-xl font-bold">{cat.category}</h2>
+          <p className="text-gray-400 text-sm mt-2">
+            {cat.items.length} items
+          </p>
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+
+
+import { Routes, Route } from "react-router-dom";
+import Welcome from "./pages/Welcome";
+import Category from "./pages/Category";
+import CategoryDetail from "./pages/CategoryDetail";
+import Recommendation from "./pages/Recommendation";
+import About from "./pages/About";
+import Navbar from "./components/Navbar";
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/category" element={<Category />} />
+        <Route path="/category/:name" element={<CategoryDetail />} />
+        <Route path="/recommendation" element={<Recommendation />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </div>
+  );
+}
+
+
+
+/* =======================
+DETAIL CATEGORY
+======================= */
+
+
+import { useParams } from "react-router-dom";
+import menu from "../data/menu.json";
+import type { MenuCategory } from "../types/menu";
+
+const data = menu as MenuCategory[];
+
+export default function CategoryDetail() {
+  const { name } = useParams();
+
+  const category = data.find(
+    (c) => c.category.toLowerCase() === name?.toLowerCase()
+  );
+
+  if (!category) {
+    return <div className="p-6">Category not found</div>;
+  }
+
+  return (
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-6">{category.category}</h1>
+
+      <div className="grid gap-4">
+        {category.items.map((item) => (
+          <div
+            key={item.title}
+            className="p-4 border border-gray-700 rounded-xl"
+          >
+            <div className="flex justify-between">
+              <h3 className="font-semibold">{item.title}</h3>
+              <span>{item.price}</span>
+            </div>
+
+            <p className="text-gray-400 text-sm mt-2">{item.desc}</p>
+
+            {item.pick.length > 0 && (
+              <p className="text-yellow-400 text-xs mt-2">
+                {item.pick.includes("chef") && "👨‍🍳 Chef Pick "}
+                {item.pick.includes("guest") && "⭐ Guest Favorite"}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+
+/* =======================
+BG URL
+======================= */
+<div
+  className="
+    flex flex-col justify-end
+    min-w-[360px] w-full h-screen
+    gap-2.5 p-4
+    rounded-lg border shadow-md
+    border-[var(--color-border)]
+    bg-[url('/src/Assets/plainbg.png')]
+    bg-cover bg-no-repeat
+  "
+>
+
+
+
+@theme {
+  --color-background: #121212;
+  --color-surface: #232323;
+  --color-primary: #C49A6C;
+}
+
+/* =======================
+CARA PANGGIL
+======================= */
+<div className="bg-background">
+<div className="bg-surface">
+<p className="text-primary">
+
+
+
+const categoryPic: Record<CategoryName, string> = {
+  "Black Tea": cat1,
+  "Green Tea": cat2,
+  "Herbal Tea": cat3,
+  "Specialty Tea": cat4,
+  "Tea Latte": cat5,
+  "Coffee": cat6,
+};
+
+
+<div className="lm-category">
+  {teaMenu.map((item, index) => (
+    <div className="list-card" key={index}>
+      <div
+        className="list-img"
+        onClick={() => navigateToCategory(item.category)}
+      >
+        <img
+          src={categoryPic[item.category as CategoryName]}
+          alt={item.category}
+        />
+      </div>
+
+      <h4>{item.category}</h4>
+    </div>
+  ))}
+</div>
+
+import menu from "../data/menu.json";
+import type { MenuCategory, MenuItem } from "../types/menu";
+
+const data = menu as MenuCategory[];
+
+export default function Recommendation() {
+  const allItems: MenuItem[] = data.flatMap((c) => c.items);
+
+  const chefPick = allItems.filter((item) =>
+    item.pick.includes("chef")
+  );
+
+  const guestPick = allItems.filter((item) =>
+    item.pick.includes("guest")
+  );
+
+  return (
+    <div className="p-6 space-y-10">
+      <div>
+        <h2 className="text-2xl font-bold mb-4">👨‍🍳 Chef Pick</h2>
+        <div className="grid gap-3">
+          {chefPick.map((item) => (
+            <div key={item.title} className="p-3 border rounded">
+              {item.title} - {item.price}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="text-2xl font-bold mb-4">⭐ Guest Favorite</h2>
+        <div className="grid gap-3">
+          {guestPick.map((item) => (
+            <div key={item.title} className="p-3 border rounded">
+              {item.title} - {item.price}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+📍 42 Floral Street, Covent Garden, London WC2E 9DA, United Kingdom

@@ -1,0 +1,490 @@
+[
+    {
+        "id": 1,
+        "category": "Dekultur Signature",
+        "categoryDesc": "A collection of our signature handcrafted drinks, created with unique house recipes and carefully selected ingredients for an unforgettable café experience.",
+        "items": [
+            {
+                "id": 1,
+                "name": "Caramel Macchiato",
+                "description": "Espresso blended with creamy milk and caramel, finished with rich flavor notes of pandan, palm sugar, chocolate, hazelnut, and strawberry.",
+                "tags": [
+                    "signature",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "barista",
+                    "guest"
+                ],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 2,
+                "name": "Butterscloud",
+                "description": "A creamy signature latte with buttery sweetness and smooth espresso.",
+                "tags": [
+                    "signature",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "price": {
+                    "medium": 36,
+                    "large": 46
+                }
+            },
+            {
+                "id": 3,
+                "name": "Banana Latte",
+                "description": "Smooth espresso combined with fresh banana and creamy milk.",
+                "tags": [
+                    "signature"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 4,
+                "name": "Mocha Latte",
+                "description": "Espresso with chocolate and steamed milk for a rich mocha experience.",
+                "tags": [
+                    "chocolate"
+                ],
+                "menuPicks": [
+                    "guest",
+                    "mainMenu"
+                ],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 5,
+                "name": "Dekultureese",
+                "description": "Our exclusive house blend featuring creamy milk and bold espresso.",
+                "tags": [
+                    "signature"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "price": {
+                    "medium": 36,
+                    "large": 46
+                }
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Coffee",
+        "categoryDesc": "Classic espresso-based beverages brewed from premium coffee beans, offering balanced flavors for every coffee lover.",
+        "items": [
+            {
+                "id": 6,
+                "name": "Espresso",
+                "description": "Rich single-shot espresso with a bold aroma.",
+                "tags": [
+                    "classic"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 23,
+                    "large": 29
+                }
+            },
+            {
+                "id": 7,
+                "name": "Americano",
+                "description": "Espresso diluted with hot water for a clean and smooth finish.",
+                "tags": [
+                    "classic"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 8,
+                "name": "Fredo Cappuccino",
+                "description": "Iced cappuccino with creamy foam and balanced espresso.",
+                "tags": [
+                    "iced",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "guest"
+                ],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 9,
+                "name": "Caffe Latte",
+                "description": "Smooth espresso topped with silky steamed milk.",
+                "tags": [
+                    "classic"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 10,
+                "name": "Cappuccino",
+                "description": "Classic cappuccino with rich espresso and velvety milk foam.",
+                "tags": [
+                    "classic"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 11,
+                "name": "Es Kopi Susu",
+                "description": "Indonesian iced milk coffee with pandan, palm sugar, chocolate, hazelnut, and strawberry notes.",
+                "tags": [
+                    "indonesian",
+                    "popular",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "guest"
+                ],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Non Coffee",
+        "categoryDesc": "Creamy, refreshing, and flavorful beverages made without coffee—perfect for those seeking a comforting alternative.",
+        "items": [
+            {
+                "id": 12,
+                "name": "Fresh Milk",
+                "description": "Fresh creamy milk served chilled.",
+                "tags": [],
+                "menuPicks": [],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 13,
+                "name": "Matcha Greentea",
+                "description": "Premium Japanese matcha blended with creamy milk.",
+                "tags": [
+                    "matcha",
+                    "popular",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "guest"
+                ],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 14,
+                "name": "Chocomilo Machiato",
+                "description": "Chocolate malt drink layered with creamy foam.",
+                "tags": [
+                    "kids"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 15,
+                "name": "Chocolate",
+                "description": "Rich and creamy hot chocolate made with premium cocoa.",
+                "tags": [
+                    "chocolate"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 16,
+                "name": "Chocolate Hazelnut",
+                "description": "Creamy chocolate blended with roasted hazelnut flavor.",
+                "tags": [
+                    "hazelnut",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "guest"
+                ],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 17,
+                "name": "Susu",
+                "description": "Fresh milk infused with your favorite flavored syrup.",
+                "tags": [],
+                "menuPicks": [],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 18,
+                "name": "Butterscotch Latte",
+                "description": "Creamy latte with sweet butterscotch flavor.",
+                "tags": [
+                    "sweet",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Traditional Coffee",
+        "categoryDesc": "Experience the authentic taste of traditional coffee brewing methods, showcasing rich aromas and timeless coffee traditions.",
+        "items": [
+            {
+                "id": 19,
+                "name": "Tubruk",
+                "description": "Traditional Indonesian black coffee brewed without filtering.",
+                "tags": [
+                    "traditional"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 25,
+                    "large": 25
+                }
+            },
+            {
+                "id": 20,
+                "name": "V60",
+                "description": "Hand-brewed pour-over coffee with clean and balanced flavor.",
+                "tags": [
+                    "manual brew",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "price": {
+                    "medium": 25,
+                    "large": 25
+                }
+            },
+            {
+                "id": 21,
+                "name": "Japanese",
+                "description": "Japanese-style iced coffee brewed directly over ice.",
+                "tags": [
+                    "manual brew"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 25,
+                    "large": 25
+                }
+            },
+            {
+                "id": 22,
+                "name": "Vietnamese Drip",
+                "description": "Traditional Vietnamese drip coffee with condensed milk.",
+                "tags": [
+                    "manual brew",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "guest"
+                ],
+                "price": {
+                    "medium": 25,
+                    "large": 25
+                }
+            },
+            {
+                "id": 23,
+                "name": "Sanger",
+                "description": "Acehnese-style coffee with condensed milk and a smooth finish.",
+                "tags": [
+                    "traditional"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 25,
+                    "large": 25
+                }
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Refresher",
+        "categoryDesc": "Light, sparkling, and fruit-inspired drinks crafted to refresh your day with vibrant flavors and a revitalizing finish.",
+        "items": [
+            {
+                "id": 24,
+                "name": "Nitrous Coffee",
+                "description": "Sparkling coffee infused with fruity notes of lemonade, lychee, and strawberry.",
+                "tags": [
+                    "refreshing",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 25,
+                "name": "Kombucha Coffee",
+                "description": "Coffee blended with kombucha for a refreshing fermented twist.",
+                "tags": [
+                    "seasonal"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            },
+            {
+                "id": 26,
+                "name": "Fresh Booster",
+                "description": "Refreshing lemonade with peach, lychee, and strawberry flavors.",
+                "tags": [
+                    "refreshing",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "guest"
+                ],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 27,
+                "name": "Macbliss",
+                "description": "Fruity sparkling refresher with peach, lychee, and strawberry.",
+                "tags": [
+                    "refreshing"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Tea",
+        "categoryDesc": "A curated selection of premium teas, from refreshing shaken teas to calming herbal infusions, brewed for every moment.",
+        "items": [
+            {
+                "id": 28,
+                "name": "Lemonade Shaken Tea",
+                "description": "Fresh brewed tea shaken with lemonade.",
+                "tags": [
+                    "tea"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 29,
+                "name": "Lychee Shaken Tea",
+                "description": "Refreshing black tea blended with sweet lychee.",
+                "tags": [
+                    "tea",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "guest"
+                ],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 30,
+                "name": "Chamomile Tea",
+                "description": "A soothing herbal tea with delicate floral notes.",
+                "tags": [
+                    "herbal",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "price": {
+                    "medium": 25,
+                    "large": 35
+                }
+            },
+            {
+                "id": 31,
+                "name": "Original Kombucha Tea",
+                "description": "Naturally fermented kombucha tea with a refreshing finish.",
+                "tags": [
+                    "kombucha"
+                ],
+                "menuPicks": [],
+                "price": {
+                    "medium": 30,
+                    "large": 40
+                }
+            }
+        ]
+    }
+]
