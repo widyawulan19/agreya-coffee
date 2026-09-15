@@ -15,11 +15,11 @@ export default function ImageLoader({
     const [loaded, setLoaded] = useState(false);
 
     return (
-        <div className="relative overflow-hidden rounded-xl">
+        <div className="relative overflow-hidden rounded-t-2xl w-full h-[270px]">
 
             {/* Skeleton */}
             {!loaded && (
-                <div className="absolute inset-0 animate-pulse rounded-xl bg-gray-200" />
+                <div className="absolute inset-0 animate-pulse rounded-t-2xl" />
             )}
 
             {/* Image */}

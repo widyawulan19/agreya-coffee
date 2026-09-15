@@ -15,7 +15,7 @@ function App() {
 
         <Route path='/' element={<Welcome />} />
         <Route path='/category-page' element={<CategoryPage />} />
-        <Route path='/category-detail-page/:name' element={<CategoryDetailPage />} />
+        <Route path='/category-detail-page/:title' element={<CategoryDetailPage />} />
         <Route path='/recommendation-page' element={<RecommendationPage />} />
         <Route path='/about-page' element={<About />} />
       </Routes>

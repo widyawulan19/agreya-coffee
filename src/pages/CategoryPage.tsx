@@ -1,91 +1,98 @@
 import Navbar from "../components/Navbar";
-import menu from '../data/cafe2.json'
-import type { MenuCategoryCafe } from "../types/menu";
+import menu from '../data/cafe3.json'
+import type { MenuCategory } from "../types/menu";
 
 
 // image 
-import img1 from '../assets/dkultur/cat1-new.png'
-import img2 from '../assets/dkultur/cat2.png'
-import img3 from '../assets/dkultur/cat3.png'
-import img4 from '../assets/dkultur/cat4.png'
-import img5 from '../assets/dkultur/cat5.png'
-import img6 from '../assets/dkultur/cat6.png'
+import img1 from '../assets/category/cat1.png'
+import img2 from '../assets/category/cat2.png'
+import img3 from '../assets/category/cat3.png'
+import img4 from '../assets/category/cat4.png'
+import img5 from '../assets/category/cat5.jpeg'
+import img6 from '../assets/category/cat6.png'
 import { useNavigate } from "react-router-dom";
 import NavButton from "../components/NavButton";
 import ImageLoader from "../components/ImageLoader";
+import { IoArrowForward } from "react-icons/io5";
 
-type CategoryName = | "Dekultur Signature" | "Coffee" | "Non Coffee" | "Traditional Coffee" | "Refresher" | "Tea";
+type CategoryName = | "Ice Coffee" | "Hot Coffee" | "Non Coffee Frappe" | "Coffee Frappe" | "Agreya Signature" | "Mont Blanc Series";
 
-const data = menu as MenuCategoryCafe[];
+const data = menu as MenuCategory[];
 
 export default function CategoryPage() {
     const navigate = useNavigate();
 
-    const navigateToCategory = (name: string) => {
-        navigate(`/category-detail-page/${encodeURIComponent(name)}`);
+    const navigateToCategory = (title: string) => {
+        navigate(`/category-detail-page/${encodeURIComponent(title)}`);
     }
 
 
     const categoryPic: Record<CategoryName, string> = {
-        "Dekultur Signature": img1,
-        "Coffee": img2,
-        "Non Coffee": img3,
-        "Traditional Coffee": img4,
-        "Refresher": img5,
-        "Tea": img6
+        "Ice Coffee": img1,
+        "Hot Coffee": img2,
+        "Non Coffee Frappe": img3,
+        "Coffee Frappe": img4,
+        "Agreya Signature": img5,
+        "Mont Blanc Series": img6,
     };
 
 
     return (
-        <div className='bg-primary h-screen w-[360px] pt-4 pb-4 px-4 flex flex-col items-center  gap-4'>
+        <div className='bg-primary h-screen w-[360px] pt-4  flex flex-col items-center gap-4 '>
             <Navbar />
+            <div className="w-[90%] flex flex-col items-center gap-4  h-[80vh] overflow-auto">
+                <div className="w-[90%] flex flex-col items-center mt-5 gap-2">
+                    <span className="tracking-[1px] text-grey text-xs font-medium ">DISCOVERY</span>
+                    <h2 className="font-medium tracking-[1px] text-accent text-[25px] ">Our Collections</h2>
+                    <p className="font-light text-accent text-xs w-[90%] text-center leading-[20px]">
+                        Experience the art of artisanal brewing.
+                        From our signature Java Series to refined Mont Blanc Compositions, each category represents a curated journey through aroma and texture .
+                    </p>
+                </div>
 
-            <div className="w-[90%]">
-                <h2 className="font-bold text-accent text-lg mb-2">Our Menu</h2>
-                <p className="font-light text-soft-accent text-[11px]">
-                    Browse our handcrafted coffee, refreshing beverages, and freshly prepared snacks—made to brighten every day.
-                </p>
-            </div>
-
-            <div className="p-2 flex flex-col gap-4  h-[75vh] overflow-y-auto ">
-                {data.map((item, index) => (
-                    <div className="list-card" key={index}>
+                <div className="p-2 flex flex-col gap-5 w-[85%] h-full mt-4 ">
+                    {data.map((item) => (
                         <div
-                            className="cursor-pointer overflow-hidden rounded-xl"
+                            className={`
+                                flex flex-col 
+                                cursor-pointer
+                                transition-all
+                                duration-300
+                                ease-out
+                                hover:scale-100
+                                hover:-translate-y-1
+                                hover:drop-shadow-md
+                                rounded-4xl
+                                border border-[#e4e0e0]
+                                ${item.id % 2 === 0
+                                    ? "bg-card-light"
+                                    : "bg-card-soft"
+                                }
+                                
+                                `}
+                            key={item.id}
                             onClick={() => navigateToCategory(item.category)}
+
                         >
-                            <ImageLoader
-                                src={categoryPic[item.category as CategoryName]}
-                                alt={item.category}
-                                className="
-                                    transition-all
-                                    duration-300
-                                    ease-out
-                                    hover:scale-105
-                                    hover:-translate-y-1
-                                    hover:drop-shadow-xl
-                                "
-                            />
-                            {/* <img
-                                src={categoryPic[item.category as CategoryName]}
-                                alt={item.category}
-                                className="
-                                    transition-all
-                                    duration-300
-                                    ease-out
-                                    hover:scale-105
-                                    hover:-translate-y-1
-                                    hover:drop-shadow-xl
-                                "
-                            /> */}
+                            <div className=" p-5 text-accent flex flex-col gap-1.5">
+                                <span className="text-sm font-light">0{item.id}</span>
+                                <h2 className="text-xl font-bold">{item.category}</h2>
+                                <p className="text-xs text-[#404946] font-light">{item.description}</p>
+                                <p className="text-sm  flex items-center gap-1.5">{item.jumlahItem} items <IoArrowForward /></p>
+                            </div>
+
+                            <div className="rounded-b-4xl">
+                                <img
+                                    className="rounded-b-4xl w-full h-full object-cover"
+                                    src={categoryPic[item.category as CategoryName]}
+                                    alt={item.category}
+                                />
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-
             <NavButton />
-
-
         </div>
     )
 }

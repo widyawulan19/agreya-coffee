@@ -1,0 +1,252 @@
+[
+    {
+        "id": 1,
+        "category": "Ice Coffee",
+        "description": "Refreshing espresso-based coffee served over ice, crafted to keep you energized and cool throughout the day.",
+        "jumlahItem": 7,
+        "items": [
+            {
+                "title": "Es Kopi Susu Agreya",
+                "desc": "Signature iced coffee with espresso, fresh milk, and sweet brown sugar.",
+                "price": "$32",
+                "tags": [
+                    "signature",
+                    "popular"
+                ],
+                "menuPicks": [
+                    "chef",
+                    "guest"
+                ]
+            },
+            {
+                "title": "Dirty Latte",
+                "desc": "Espresso gently poured over chilled milk for a smooth layered flavor.",
+                "price": "$35",
+                "tags": [
+                    "recommended"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "img": "../assets/recommendation/Dirty_Coffee.jpeg"
+            },
+            {
+                "title": "Dirty Matcha",
+                "desc": "Premium matcha topped with rich espresso for a bold fusion.",
+                "price": "$38",
+                "tags": [
+                    "recommended"
+                ],
+                "menuPicks": [
+                    "barista"
+                ],
+                "img": "../assets/recommendation/pandan.jpeg"
+            },
+            {
+                "title": "Salted Shaken Latte",
+                "desc": "Creamy shaken latte finished with a touch of sea salt.",
+                "price": "$42",
+                "tags": [
+                    "popular"
+                ],
+                "menuPicks": [
+                    "guestPicks"
+                ],
+                "extraTag": [
+                    "SWEET",
+                    "CREAMY"
+                ]
+            },
+            {
+                "title": "Americano",
+                "desc": "Double espresso diluted with chilled water for a clean coffee taste.",
+                "price": "$32"
+            },
+            {
+                "title": "Cappuccino",
+                "desc": "Espresso with cold milk foam for a refreshing twist.",
+                "price": "$45",
+                "tags": [
+                    "popular"
+                ],
+                "menuPicks": [
+                    "guestPicks"
+                ],
+                "extraTag": [
+                    "NUTTY",
+                    "BALANCED"
+                ]
+            },
+            {
+                "title": "Salted Caramel",
+                "desc": "Espresso blended with caramel syrup and a hint of sea salt.",
+                "price": "$55"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Hot Coffee",
+        "description": "Freshly brewed coffee prepared with premium beans for a warm and comforting experience.",
+        "jumlahItem": 7,
+        "items": [
+            {
+                "title": "Magic",
+                "desc": "Double ristretto with silky steamed milk, rich and smooth.",
+                "price": "$45",
+                "tags": [
+                    "signature"
+                ],
+                "menuPicks": [
+                    "chef"
+                ]
+            },
+            {
+                "title": "Americano",
+                "desc": "Classic espresso with hot water for a bold yet clean flavor.",
+                "price": "$32"
+            },
+            {
+                "title": "Espresso",
+                "desc": "A concentrated shot with deep aroma and balanced bitterness.",
+                "price": "$28"
+            },
+            {
+                "title": "Piccolo",
+                "desc": "Small milk coffee with double ristretto and steamed milk.",
+                "price": "$30"
+            },
+            {
+                "title": "Cappuccino",
+                "desc": "Espresso topped with velvety milk foam.",
+                "price": "$45"
+            },
+            {
+                "title": "Cafe Latte",
+                "desc": "Smooth espresso combined with steamed milk.",
+                "price": "$43"
+            },
+            {
+                "title": "Salted Caramel Latte",
+                "desc": "Creamy latte infused with salted caramel syrup.",
+                "price": "$45"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Non Coffee Frappe",
+        "description": "Creamy blended beverages with sweet flavors, perfect for non-coffee lovers.",
+        "jumlahItem": 4,
+        "items": [
+            {
+                "title": "Cookies & Cream",
+                "desc": "Blended cookies with fresh cream for a rich dessert drink.",
+                "price": "$62",
+                "menuPicks": [
+                    "guest"
+                ]
+            },
+            {
+                "title": "Chocolate Frappe",
+                "desc": "Creamy chocolate blended with ice and whipped cream.",
+                "price": "$62"
+            },
+            {
+                "title": "Matcha Frappe",
+                "desc": "Japanese matcha blended with milk into a refreshing frappe.",
+                "price": "$65"
+            },
+            {
+                "title": "Marie & Cream",
+                "desc": "Sweet Marie biscuits blended into a creamy frappe.",
+                "price": "$62"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Coffee Frappe",
+        "description": "Refreshing coffee blended with ice and premium ingredients for a creamy finish.",
+        "jumlahItem": 2,
+        "items": [
+            {
+                "title": "Butterscotch Frappe",
+                "desc": "Coffee frappe with rich butterscotch flavor.",
+                "price": "$65"
+            },
+            {
+                "title": "Salted Caramel Frappe",
+                "desc": "Smooth coffee frappe balanced with salted caramel sweetness.",
+                "price": "$65",
+                "menuPicks": [
+                    "guest"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Agreya Signature",
+        "description": "Our exclusive house-crafted beverages made with premium ingredients and unique flavor combinations.",
+        "jumlahItem": 4,
+        "items": [
+            {
+                "title": "Rahayu",
+                "desc": "Sweet and creamy signature blend with smooth coffee notes.",
+                "price": "$39",
+                "tags": [
+                    "signature",
+                    "best seller"
+                ],
+                "menuPicks": [
+                    "chef",
+                    "barista"
+                ]
+            },
+            {
+                "title": "Patih",
+                "desc": "Herbal-inspired signature coffee with a refreshing finish.",
+                "price": "$39"
+            },
+            {
+                "title": "Sekar",
+                "desc": "Creamy caramel coffee with a silky texture.",
+                "price": "$39"
+            },
+            {
+                "title": "Aksara",
+                "desc": "Chocolate and nutty coffee blend with rich aroma.",
+                "price": "$39"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Mont Blanc Series",
+        "description": "A unique coffee collection inspired by premium coffee beans and specialty roasting profiles.",
+        "jumlahItem": 4,
+        "items": [
+            {
+                "title": "Dimas",
+                "desc": "Gunung Arca natural beans with bold and strong characteristics.",
+                "price": "$35"
+            },
+            {
+                "title": "Asih",
+                "desc": "Flores honey processed beans with floral sweetness.",
+                "price": "$35"
+            },
+            {
+                "title": "Mont Blanc Dimas",
+                "desc": "Creamy milk-based coffee featuring Dimas coffee beans.",
+                "price": "$42"
+            },
+            {
+                "title": "Mont Blanc Asih",
+                "desc": "Fresh citrus coffee blended with Asih beans for a vibrant finish.",
+                "price": "$42"
+            }
+        ]
+    }
+]
